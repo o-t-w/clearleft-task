@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font: inherit;
+}
+
+:root {
+    --dark-blue: #0E2254;
+    --blue-white: #EDEEF8;
+    --gray: #8291B6;
+    --white: #FFFFFF;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--dark-blue);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+p {
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.mb-medium {
+    margin-bottom: 17px;
+}
+
+.mb-large {
+    margin-bottom: 33px;
+}
+
+.heading-4 {
+    font-size: 31.25px;
+    font-weight: 800;
+    line-height: 32px;
+}
+
+.main-container {
+    max-width: 1392px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cards {
+    display: grid;
+    gap: 24px;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 28px;
+    margin-bottom: 28px;
+}
+
+@media(min-width: 490px) {
+.cards {
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-top: 35px;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+}
+
+.card {
+    background-color: var(--blue-white);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.card__image {
+    width: 100%;
+    height: 195px;
+    object-fit: cover;
+}
+
+.card__inner {
+    padding-bottom: 30px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.tags {
+    display: flex;
+}
+
+.tag + .tag {
+    margin-left: 8px;
+}
+
+.tag {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    padding: 4px 11px;
+    text-transform: uppercase;
+    font-size: 12.8px;
+    font-weight: 700;
+    border-radius: 8px;
+}
+
+.when-posted {
+    text-transform: uppercase;
+    font-size: 12.8px;
+    font-weight: 400;
+    color: var(--gray);
+    margin-top: 25px;
+    margin-bottom: 14px;
+}

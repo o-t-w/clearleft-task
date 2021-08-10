@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    {{!-- <script>
+        const date1 = luxon.DateTime.fromISO("2020-09-06T12:00")
+        const date2 = luxon.DateTime.fromISO("2019-06-10T14:00")
+        const diff = date1.diff(date2, ["years", "months", "days", "hours"])
+        console.log(diff.toObject())
+    </script> --}}
+</head>
+<body>
+    <div class="main-container">
+
+{{#if cards.error}}
+<h2>Error getting data</h2>
+{{/if}}
+
+{{#if cards}}
+     <div class="cards">
+ {{#each cards}}
+    <div class="card">
+        <img class="card__image" src={{this.image}} alt="">
+        <div class="card__inner">
+        <p class="when-posted">4 Days ago</p>
+        <h2 class="heading-4 mb-medium">{{this.title}}</h2>
+        <p class="mb-large">{{this.excerpt}}</p>
+        <div class="tags">
+             {{#each this.categories}}
+                 <div class="tag">{{this}}</div>
+                {{/each}}
+        </div>
+    </div>
+    </div>
+    {{/each}}
+
+</div>
+{{/if}}
+
+</div>
+</body>
+</html>
