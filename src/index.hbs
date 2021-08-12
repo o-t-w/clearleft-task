@@ -10,12 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-    {{!-- <script>
-        const date1 = luxon.DateTime.fromISO("2020-09-06T12:00")
-        const date2 = luxon.DateTime.fromISO("2019-06-10T14:00")
-        const diff = date1.diff(date2, ["years", "months", "days", "hours"])
-        console.log(diff.toObject())
-    </script> --}}
 </head>
 <body>
     <div class="main-container">
@@ -28,9 +22,9 @@
      <div class="cards">
  {{#each cards}}
     <div class="card">
-        <img class="card__image" src={{this.image}} alt="">
+        <img width="640" height="480" class="card__image" src={{this.image}} alt="">
         <div class="card__inner">
-        <p class="when-posted">4 Days ago</p>
+        <p style="display: none;" class="when-posted">{{this.createdAt}}</p>
         <h2 class="heading-4 mb-medium">{{this.title}}</h2>
         <p class="mb-large">{{this.excerpt}}</p>
         <div class="tags">
@@ -46,5 +40,6 @@
 {{/if}}
 
 </div>
+<script src="../assets/script.js"></script>
 </body>
 </html>

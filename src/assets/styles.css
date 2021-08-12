@@ -29,13 +29,14 @@ time, mark, audio, video {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
     color: var(--dark-blue);
 }
 
 img {
     max-width: 100%;
     display: block;
+    height: auto;
 }
 
 p {
@@ -96,6 +97,7 @@ p {
 
 .card__inner {
     padding-bottom: 30px;
+    padding-top: 25px;
     padding-left: 16px;
     padding-right: 16px;
 }
@@ -123,6 +125,5 @@ p {
     font-size: 12.8px;
     font-weight: 400;
     color: var(--gray);
-    margin-top: 25px;
     margin-bottom: 14px;
 }
